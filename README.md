@@ -11,6 +11,7 @@
 ![image](https://user-images.githubusercontent.com/19623787/191892652-8a7447b6-7811-40ec-823c-ab914ea1c048.png)
 
 # 使用
+```javascript
 import { CronTabModule } from './components/cron-tab/cron-tab.module';
 
 @NgModule({
@@ -32,9 +33,9 @@ setCron() {
     }
   })
  }
-
+```
 # 注意
-1.tab使用了ngx-bootstrap/tabs,可按需替换
-2.弹窗使用了import { NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';,可按需替换
-3.css有些class来自项目的公共样式，需按需重写
+- 1.tab使用了ngx-bootstrap/tabs,可按需替换
+- 2.弹窗使用了import { NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';,可按需替换
+- 3.css有些class来自项目的公共样式，需按需重写
 
