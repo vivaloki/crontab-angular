@@ -1,0 +1,90 @@
+@import "../../../core/scss/ng2-admin-scss/conf/mixins";
+@import '../../../core/scss/phoenix-scss/conf/phoenix-conf.scss';
+
+:host ::ng-deep {
+  .popup-main {
+    position: relative;
+    margin: 10px auto;
+    border-radius: 5px;
+    font-size: 14px;
+    overflow: hidden;
+  }
+
+  .popup-result {
+    box-sizing: border-box;
+    line-height: 24px;
+    margin: 25px auto;
+    padding: 15px 10px 10px;
+    border: 1px solid var(--border-color-base);
+    position: relative;
+  }
+
+  .popup-result .title {
+    position: absolute;
+    top: -28px;
+    left: 50%;
+    width: 140px;
+    font-size: 14px;
+    margin-left: -70px;
+    text-align: center;
+    line-height: 30px;
+  }
+
+  .popup-result table {
+    text-align: center;
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .popup-result table span {
+    display: block;
+    width: 100%;
+    font-family: arial;
+    line-height: 30px;
+    height: 30px;
+    white-space: nowrap;
+    overflow: hidden;
+    border: 1px solid var(--border-color-base);
+  }
+
+  .popup-result-scroll {
+    font-size: 14px;
+    line-height: 24px;
+    height: 10em;
+    overflow-y: auto;
+  }
+
+  .modal-body ul {
+    padding-left: 0;
+  }
+
+  .modal-content .nav.nav-tabs .nav-item {
+    padding-right: 1px;
+  }
+
+  .tab-content {
+    padding: 0;
+    background-color: transparent;
+    border: 1px solid var(--border-color-base);
+  }
+
+  table,
+  td,
+  th {
+    border: none;
+    text-align: center;
+  }
+
+  .phoenix-form {
+    padding-left: 10px;
+  }
+
+  .ml-10 {
+    margin-left: 10px;
+  }
+
+  .form-control {
+    display: inline-block;
+    width: 100px;
+  }
+}

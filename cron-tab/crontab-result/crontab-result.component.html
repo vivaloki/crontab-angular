@@ -1,0 +1,9 @@
+<div class="popup-result">
+  <p class="title">最近5次运行时间</p>
+  <ul class="popup-result-scroll">
+    <div *ngIf="isShow">
+      <li *ngFor="let item of resultList">{{item}}</li>
+    </div>
+    <li *ngIf="!isShow">计算结果中...</li>
+  </ul>
+</div>

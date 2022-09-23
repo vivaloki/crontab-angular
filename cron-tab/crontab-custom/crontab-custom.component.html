@@ -1,0 +1,6 @@
+<form #ngForm="ngForm" class="phoenix-form"> 
+  <div class="form-group row">
+    <label class="ml-10">表达式</label>
+    <input type="text" name="crontabcustom" [(ngModel)]="cronExpression" (change)="inputChange()"/>
+  </div>
+</form>

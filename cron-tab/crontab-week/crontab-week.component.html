@@ -1,0 +1,53 @@
+<form #ngForm="ngForm" class="phoenix-form">
+  <div class="form-group row">
+    <input type="radio" name="crontabweek" [(ngModel)]="radioValue" value="1" (change)="radioChange()" />
+    <label class="ml-10">每周</label>
+  </div>
+
+  <div class="form-group row">
+    <input type="radio" name="crontabweek" [(ngModel)]="radioValue" value="2" (change)="radioChange()" />
+    <label class="ml-10">不指定</label>
+  </div>
+
+  <div class="form-group row">
+    <input type="radio" name="crontabweek" [(ngModel)]="radioValue" value="3" (change)="radioChange()" />
+    <label class="ml-10">
+      周期从星期
+      <input type="number" class="form-control" name="cycle01" [(ngModel)]="cycle01" min="0" max="23"
+        (change)="inputChange('3')" /> -
+      <input type="number" class="form-control" name="cycle02" [(ngModel)]="cycle02" min="0" max="23"
+        (change)="inputChange('3')" />
+    </label>
+  </div>
+
+  <div class="form-group row">
+    <input type="radio" name="crontabweek" [(ngModel)]="radioValue" value="4" (change)="radioChange()" />
+    <label class="ml-10">
+      第
+      <input type="number" class="form-control" name="average01" [(ngModel)]="average01" min="1" max="4"
+        (change)="inputChange('4')" /> 周的星期
+      <input type="number" class="form-control" name="average02" [(ngModel)]="average02" min="1" max="7"
+        (change)="inputChange('4')" />
+    </label>
+  </div>
+
+  <div class="form-group row">
+    <input type="radio" name="crontabweek" [(ngModel)]="radioValue" value="5" (change)="radioChange()" />
+    <label class="ml-10">
+      本月最后一个星期
+      <input type="number" class="form-control" name="weekday" [(ngModel)]="weekday" min="1" max="7"
+        (change)="inputChange('5')" />
+    </label>
+  </div>
+
+  <div class="form-group row">
+    <input type="radio" name="crontabweek" [(ngModel)]="radioValue" value="6" (change)="radioChange()" />
+    <label class="ml-10">
+      指定
+    </label>
+    <ng-select class="col-sm-6 p-0 form-control phoenix-select" [options]="weekList" [multiple]="true"
+      (selected)="inputChange('6')" (deselected)="inputChange('6')" placeholder="可多选" name="second"
+      notFoundMsg="{{'general.common.noData' | translate}}" [(ngModel)]="checkboxList">
+    </ng-select>
+  </div>
+</form>
