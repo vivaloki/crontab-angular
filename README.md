@@ -10,7 +10,7 @@
 ![image](https://user-images.githubusercontent.com/19623787/191892644-f539ea17-ac2c-4b3d-a5e9-d206bad008a8.png)
 ![image](https://user-images.githubusercontent.com/19623787/191892652-8a7447b6-7811-40ec-823c-ab914ea1c048.png)
 
-# 引用
+# 使用
 import { CronTabModule } from './components/cron-tab/cron-tab.module';
 
 @NgModule({
@@ -22,6 +22,16 @@ import { CronTabModule } from './components/cron-tab/cron-tab.module';
   exports: []
 })
 export class xxxModule { }
+
+setCron() {
+  const modal = this.ngbModal.open(CronTabComponent, { backdrop: 'static' });
+  modal.componentInstance.expression = this.linkageStrategyItem.cron;
+  modal.result.then(res => {
+    if (res) {
+      this.linkageStrategyItem.cron = res;
+    }
+  })
+ }
 
 # 注意
 1.tab使用了ngx-bootstrap/tabs,可按需替换
